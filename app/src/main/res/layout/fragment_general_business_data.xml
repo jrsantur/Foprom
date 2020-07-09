@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fadeScrollbars="false"
+    android:isScrollContainer="true"
+    android:overScrollMode="always"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_marginBottom="16dp"
+    tools:context="pe.juabsa.cipca.foprom.ui.home.commerce.detail.GeneralBusinessDataFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/content_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:overScrollMode="always">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/in_time_work"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/textInputLayout"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginRight="16dp"
+            android:hint="Tiempo en el mercado"
+            app:layout_goneMarginTop="16dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/time_work"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="number" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/in_business_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Nombre del negocio"
+            app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
+            app:layout_constraintStart_toStartOf="@+id/in_time_work"
+            app:layout_constraintTop_toBottomOf="@id/in_time_work"
+            app:layout_goneMarginTop="16dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/business_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="textPersonName" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_goneMarginLeft="16dp"
+            app:layout_goneMarginTop="16dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/sp_time_work"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:editable="false" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/in_type_work"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Tipo de negocio"
+            app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
+            app:layout_constraintStart_toStartOf="@+id/in_time_work"
+            app:layout_constraintTop_toBottomOf="@id/in_business_name">
+
+            <AutoCompleteTextView
+                android:id="@+id/type_work"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:editable="false" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/in_opening_time"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Hora inicio"
+            android:layout_marginRight="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/in_closing_time"
+            app:layout_constraintStart_toStartOf="@+id/in_type_work"
+            app:layout_constraintTop_toBottomOf="@id/in_type_work">
+
+            <AutoCompleteTextView
+                android:id="@+id/opening_time"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:editable="false" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/in_closing_time"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Hora fin"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintBottom_toBottomOf="@id/in_opening_time"
+            app:layout_constraintEnd_toEndOf="@+id/in_type_work"
+            app:layout_constraintStart_toEndOf="@id/in_opening_time">
+
+            <AutoCompleteTextView
+                android:id="@+id/closing_time"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:editable="false" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/in_type_local"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Tipo de local"
+            app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
+            app:layout_constraintStart_toStartOf="@+id/in_time_work"
+            app:layout_constraintTop_toBottomOf="@id/in_opening_time">
+
+            <AutoCompleteTextView
+                android:id="@+id/type_local"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:editable="false" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/in_business_rent_amount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Monto de alquiler"
+            app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
+            app:layout_constraintStart_toStartOf="@+id/in_time_work"
+            app:layout_constraintTop_toBottomOf="@id/in_type_local"
+            app:layout_goneMarginTop="16dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/business_rent_amount"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="number" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/in_business_ruc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Ruc del negocio"
+            app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
+            app:layout_constraintStart_toStartOf="@+id/in_time_work"
+            app:layout_constraintTop_toBottomOf="@id/in_business_rent_amount"
+            app:layout_goneMarginTop="16dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/business_business_ruc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="number" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <pe.juabsa.cipca.foprom.ui.custom.MultiSelectionSpinner
+            android:id="@+id/sp_working_days"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Seleccione Servicios basicos"
+            android:paddingTop="8dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
+            app:layout_constraintStart_toStartOf="@+id/in_time_work"
+            app:layout_constraintTop_toBottomOf="@id/in_business_ruc" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/in_male_employees"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Empleados"
+            android:layout_marginRight="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/in_female_employees"
+            app:layout_constraintStart_toStartOf="@+id/in_type_work"
+            app:layout_constraintTop_toBottomOf="@id/sp_working_days">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/male_employees"
+                android:layout_width="match_parent"
+                android:inputType="number"
+                android:layout_height="match_parent"
+                android:editable="false" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/in_female_employees"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Empleadas"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintBottom_toBottomOf="@id/in_male_employees"
+            app:layout_constraintEnd_toEndOf="@+id/in_type_work"
+            app:layout_constraintStart_toEndOf="@id/in_male_employees">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/female_employees"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="number"
+                android:editable="false" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/in_amount_paid_employees"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Monto de alquiler"
+            app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
+            app:layout_constraintStart_toStartOf="@+id/in_time_work"
+            app:layout_constraintTop_toBottomOf="@id/in_male_employees"
+            app:layout_goneMarginTop="16dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/amount_paid_employees"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="number" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:id="@+id/content_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="24dp"
+            android:gravity="center"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/in_amount_paid_employees"
+            >
+            <include
+                layout="@layout/btn_layout"
+                />
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>
+</layout>

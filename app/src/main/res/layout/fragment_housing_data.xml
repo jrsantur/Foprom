@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.client.detail.HousingDataFragment">
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/in_spinner_house"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:hint="Topo de vivienda"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        >
+
+        <AutoCompleteTextView
+            android:id="@+id/spinner_house"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:editable="false"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <pe.juabsa.cipca.foprom.ui.custom.MultiSelectionSpinner
+        android:id="@+id/searchMultiSpinnerUnlimited"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Seleccione Servicios basicos"
+        android:paddingTop="8dp"
+        android:paddingRight="8dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintLeft_toLeftOf="@id/in_spinner_house"
+        app:layout_constraintRight_toRightOf="@id/in_spinner_house"
+        app:layout_constraintTop_toBottomOf="@id/in_spinner_house" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/in_residence_time"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Tiempo residencia (años) "
+        android:inputType="number"
+        app:layout_constraintLeft_toLeftOf="@id/in_spinner_house"
+        app:layout_constraintRight_toRightOf="@id/in_spinner_house"
+        app:layout_constraintTop_toBottomOf="@id/searchMultiSpinnerUnlimited">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/residence_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/in_address_client"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Direccion de domicilio"
+        android:inputType="textPersonName"
+        app:layout_constraintRight_toRightOf="@id/in_spinner_house"
+        app:layout_constraintLeft_toLeftOf="@id/in_spinner_house"
+        app:layout_constraintTop_toBottomOf="@id/in_residence_time">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/address_client"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/in_home_reference"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Referencia domicilio"
+        android:inputType="textPersonName"
+        app:layout_constraintLeft_toLeftOf="@id/in_spinner_house"
+        app:layout_constraintRight_toRightOf="@id/in_spinner_house"
+        app:layout_constraintTop_toBottomOf="@id/in_address_client">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/home_reference"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/in_email_client"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Correo electrónico"
+        android:inputType="textPersonName"
+        app:layout_constraintLeft_toLeftOf="@id/in_spinner_house"
+        app:layout_constraintRight_toRightOf="@id/in_spinner_house"
+        app:layout_constraintTop_toBottomOf="@id/in_home_reference">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/email_client"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:id="@+id/content_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="24dp"
+        android:gravity="center"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+        <include
+            layout="@layout/btn_layout"
+            />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

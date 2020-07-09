@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="8dp"
+    android:layout_gravity="center">
+
+  <Button
+      android:id="@+id/btnBack"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="16dp"
+      android:visibility="invisible"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      android:text="Anterior"
+      />
+
+  <Button
+      android:id="@+id/btnNext"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Siguiente"
+      android:layout_marginRight="16dp"
+      app:layout_constraintBottom_toBottomOf="@id/btnBack"
+      app:layout_constraintEnd_toEndOf="parent"
+      android:enabled="false"
+      app:layout_constraintLeft_toRightOf="@id/btnBack"
+      app:layout_constraintRight_toRightOf="parent" />
+
+  <Button
+      android:id="@+id/btnSave"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:visibility="invisible"
+      android:text="GUardar"
+      app:layout_constraintBottom_toBottomOf="@id/btnBack"
+      app:layout_constraintEnd_toStartOf="@+id/btnNext"
+      app:layout_constraintStart_toEndOf="@+id/btnBack" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

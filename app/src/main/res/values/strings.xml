@@ -1,0 +1,291 @@
+<!--
+  ~ Copyright (C) 2017 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+    <string name="app_name">Foprom</string>
+    <string name="retry">Retry</string>
+    <string name="unknown_error">Unknown Error</string>
+    <string name="a11y_user_photo">user photo</string>
+    <string name="a11y_user_name">user name</string>
+    <string name="search_hint">search repositories</string>
+    <string name="repo_full_name"><b>%s</b>/%s</string>
+    <string name="empty_search_result">No results for <b>%s</b></string>
+    <string name="a11y_contributor_avatar">contributor avatar</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_solicitude">Solicitudes</string>
+    <string name="menu_client">Clientes</string>
+    <string name="menu_commerce">Comercios</string>
+    <string name="menu_location">Locacion</string>
+    <string name="menu_sync">"Sincronizar datos "</string>
+
+
+    <string name="home_second">Home Second</string>
+    <string name="general_data">Datos Generales</string>
+    <string name="housing_data">Datos vivienda</string>
+    <string name="labor_data">Datos laborales</string>
+    <string name="spouse_data">Datos conyugue</string>
+    <string name="title_activity_detail_client">Datos del cliente</string>
+
+    <!--Arrays-->
+    <string-array name="arr_credit_product">
+        <item>Seleccione Produccto Crediticio</item>
+        <item>Banco Comunal</item>
+        <item>Grupo Solidario</item>
+        <item>Paralelo</item>
+        <item>Crediemprende</item>
+    </string-array>
+
+    <string-array name="arr_name_gs_bc">
+        <item>Seleccione Grupo Solidario</item>
+        <item>Sr. de los Milagros</item>
+        <item>Madre Unidas</item>
+        <item>Guerreras de Dios </item>
+        <item>Pax y Amor</item>
+    </string-array>
+
+    <string-array name="arr_sex">
+        <item>Sexo</item>
+        <item>Hombre</item>
+        <item>Mujer</item>
+        <item>Intersexual</item>
+    </string-array>
+
+    <string-array name="arr_gender_identity">
+        <item>Identidad género</item>
+        <item>CISGÉNERO</item>
+        <item>QUIER</item>
+        <item>TANSGÉNERO</item>
+    </string-array>
+
+
+    <string-array name="arr_civil_status">
+        <item>Estado Civil</item>
+        <item>Soltera</item>
+        <item>Casada(o)</item>
+        <item>Conviviente</item>
+        <item>Viuda</item>
+        <item>Divorciada</item>
+    </string-array>
+
+    <string-array name="arr_education_level">
+        <item>Nivel Educacion</item>
+        <item>Sin instrucción</item>
+        <item>Primaria</item>
+        <item>Secundaria</item>
+        <item>Sup. técnica</item>
+        <item>Sup. universitaria</item>
+    </string-array>
+
+    <string-array name="arr_number">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+    </string-array>
+
+    <string-array name="arr_basic_services">
+        <item>Agua</item>
+        <item>Luz</item>
+        <item>Telefono</item>
+        <item>Desague</item>
+        <item>Internet</item>
+        <item>Cable</item>
+    </string-array>
+
+    <string-array name="arr_house">
+        <item>Casa</item>
+        <item>Propia</item>
+        <item>Alquialda</item>
+        <item>Familiar</item>
+        <item>Otro</item>
+    </string-array>
+
+    <string-array name="arr_bussiness">
+        <item>Propio</item>
+        <item>Alquilada</item>
+    </string-array>
+
+
+    <string-array name="arr_salary_frequency">
+        <item>Frecuencia salario</item>
+        <item>Diario</item>
+        <item>Semanal</item>
+        <item>Quincenal</item>
+        <item>Mensual</item>
+    </string-array>
+
+    <string-array name="arr_employee">
+        <item>Trabajador</item>
+        <item>Dependiente</item>
+        <item>Independiente</item>
+    </string-array>
+
+    <string-array name="arr_time_work">
+        <item>Meses</item>
+        <item>Años</item>
+    </string-array>
+
+    <string-array name="arr_central_risk">
+        <item>Evaluación en la Central de riesgos</item>
+        <item>Nivel Normal</item>
+        <item>Cliente con problemas potenciales</item>
+        <item>Nivel Deficiente</item>
+        <item>Nivel Dudoso</item>
+    </string-array>
+
+    <string-array name="arr_unit">
+        <item>Cajas</item>
+        <item>Kilos</item>
+        <item>Litros</item>
+        <item>Paquetes</item>
+        <item>Bolsas</item>
+        <item>Unidades</item>
+        <item>Litros</item>
+        <item>Metros</item>
+    </string-array>
+
+    <string-array name="arr_type_inventory">
+        <item>Invetario</item>
+        <item>Muebles</item>
+        <item>Inmuebles</item>
+    </string-array>
+
+    <string-array name="arr_costo_venta">
+        <item>Venta</item>
+        <item>Costo</item>
+    </string-array>
+
+    <string-array name="arr_periocidad">
+        <item>Periocidad</item>
+        <item>Diaria</item>
+        <item>Semanal</item>
+        <item>Mensual</item>
+    </string-array>
+
+    <string-array name="arr_periocidad_2">
+        <item>Periocidad</item>
+        <item>Diaria</item>
+        <item>Semanal</item>
+        <item>Quincenal</item>
+        <item>Mensual</item>
+    </string-array>
+
+    <string-array name="arr_dias">
+        <item>Dias</item>
+        <item>Lunes</item>
+        <item>Martes</item>
+        <item>Miercoles</item>
+        <item>Jueves</item>
+        <item>Viernes</item>
+        <item>Sabado</item>
+        <item>Domingo</item>
+    </string-array>
+
+    <string-array name="arr_semana">
+        <item>Semana</item>
+        <item>semana 1</item>
+        <item>semana 2</item>
+        <item>semana 3</item>
+        <item>semana 4</item>
+    </string-array>
+
+    <string-array name="arr_ingresp_gastos">
+        <item>Ingresos</item>
+        <item>Gastos</item>
+    </string-array>
+
+    <string-array name="arr_gastos">
+        <item>Educacion</item>
+        <item>Servicios</item>
+        <item>Otros</item>
+    </string-array>
+
+    <string-array name="arr_ingresos">
+        <item>Familiares</item>
+        <item>Negocio</item>
+        <item>Otros</item>
+    </string-array>
+
+    <string-array name="arr_type_debit">
+        <item>Familiar</item>
+        <item>Negocio</item>
+    </string-array>
+
+    <string-array name="arr_type_work">
+        <item>Privada</item>
+        <item>Estatal</item>
+        <item>Mixta</item>
+    </string-array>
+
+
+    <string-array name="arr_type_bussiness">
+        <item>Fijo</item>
+        <item>Ambulante</item>
+    </string-array>
+
+    <string-array name="stepLabels">
+        <item>Personales</item>
+        <item>Vivienda</item>
+        <item>Laborales</item>
+        <item>Conyugue </item>
+    </string-array>
+    <string name="title_activity_commerce_detail">Datos del negocio</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="error_empty">No se acepta campo vacio</string>
+    <string name="document_error">Documento debe tener 8 caracteres</string>
+
+
+</resources>

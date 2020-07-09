@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="pe.juabsa.cipca.foprom.vo.Client" />
+        <import type="pe.juabsa.cipca.foprom.vo.Resource" />
+        <import type="androidx.lifecycle.LiveData"/>
+
+        <variable
+            name="client"
+            type="LiveData&lt;Resource&lt;Client>>" />
+
+        <variable
+            name="callback"
+            type="pe.juabsa.cipca.foprom.ui.common.RetryCallback" />
+
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:overScrollMode="always">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/in_spouse_names"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:hint="Nombre de conyugue"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/spouse_names"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@{client.data.spouse.name_spouse}"
+                        android:inputType="textPersonName"
+                         />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/in_spouse_document"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:hint="D.N.I conyugue"
+                    app:layout_constraintLeft_toLeftOf="@id/in_spouse_names"
+                    app:layout_constraintRight_toRightOf="@id/in_spouse_names"
+                    app:layout_constraintTop_toBottomOf="@id/in_spouse_names"
+
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/spouse_document"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@{client.data.spouse.docume_spose}"
+                        android:ems="7"
+                        android:maxLines="1"
+                        android:maxLength="8"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/in_spouse_activity"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:hint="Actividad de conyugue"
+                    app:layout_constraintLeft_toLeftOf="@id/in_spouse_names"
+                    app:layout_constraintRight_toRightOf="@id/in_spouse_names"
+                    app:layout_constraintTop_toBottomOf="@id/in_spouse_document">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/spouse_activity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:text="@{client.data.spouse.activity_spouse}"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/in_spinner_employee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:hint="Trabajador"
+                    app:layout_constraintLeft_toLeftOf="@id/in_spouse_names"
+                    app:layout_constraintRight_toRightOf="@id/in_spouse_names"
+                    app:layout_constraintTop_toBottomOf="@id/in_spouse_activity"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                    >
+
+                    <AutoCompleteTextView
+                        android:id="@+id/spinner_employee"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:editable="false" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/in_company_worker"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:hint="Empresa de trabajo de conyugue"
+                    app:layout_constraintLeft_toLeftOf="@id/in_spouse_names"
+                    app:layout_constraintRight_toRightOf="@id/in_spouse_names"
+                    app:layout_constraintTop_toBottomOf="@id/in_spinner_employee">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/company_worker"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@{client.data.spouse.company_spouse_works}"
+                        android:inputType="textPersonName" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/in_spinner_salary_frequency"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:hint="Frecuencia salario"
+                    app:layout_constraintLeft_toLeftOf="@id/in_spouse_names"
+                    app:layout_constraintRight_toRightOf="@id/in_spouse_names"
+                    app:layout_constraintTop_toBottomOf="@id/in_company_worker"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                    >
+
+                    <AutoCompleteTextView
+                        android:id="@+id/spinner_salary_frequency"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@{client.data.spouse.spouse_salary_frequency}"
+                        android:editable="false"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/in_labor_time"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="32dp"
+                    app:layout_constraintLeft_toLeftOf="@id/in_spinner_salary_frequency"
+                    app:layout_constraintRight_toLeftOf="@id/spinner_labor_time"
+                    android:hint="Tiempo en el trabajo"
+                    app:layout_constraintTop_toBottomOf="@id/in_spinner_salary_frequency">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/labor_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@{client.data.spouse.time_work_spouse}"
+                        android:inputType="number" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <Spinner
+                    android:id="@+id/spinner_labor_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:entries="@array/arr_time_work"
+                    android:padding="8dp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/in_labor_time"
+                    app:layout_constraintEnd_toEndOf="@+id/in_company_worker"
+                    app:layout_constraintLeft_toRightOf="@id/in_labor_time" />
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/in_monthly_salary"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="16dp"
+                    android:hint="Salario mensual"
+                    app:layout_constraintLeft_toLeftOf="@id/in_spouse_names"
+                    app:layout_constraintRight_toRightOf="@id/in_spouse_names"
+                    app:layout_constraintTop_toBottomOf="@id/in_labor_time">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/monthly_salary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@{Float.toString(client.data.spouse.monthly_salary_spouse)}"
+                        android:inputType="number" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/in_spinner_central_risk"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:hint="Evaluación en la Central de riesgos"
+                    app:layout_constraintLeft_toLeftOf="@id/in_spouse_names"
+                    app:layout_constraintRight_toRightOf="@id/in_spouse_names"
+                    app:layout_constraintTop_toBottomOf="@id/in_monthly_salary"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                    >
+
+                    <AutoCompleteTextView
+                        android:id="@+id/spinner_central_risk"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@{client.data.spouse.risk_system_evaluation_spouse}"
+                        android:editable="false"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/in_cellphone_conjugue"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="16dp"
+                    android:hint="Celular conyugue"
+                    app:layout_constraintLeft_toLeftOf="@id/in_spouse_names"
+                    app:layout_constraintRight_toRightOf="@id/in_spouse_names"
+                    app:layout_constraintTop_toBottomOf="@+id/in_spinner_central_risk">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/cellphone_conjugue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:text="@{client.data.spouse.cellphone_spouse}"
+                        android:maxLength="9" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:id="@+id/content_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginBottom="24dp"
+                    android:gravity="center"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/in_cellphone_conjugue"
+                    >
+
+                    <include
+                        layout="@layout/btn_layout"
+                        />
+
+
+                </LinearLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+</layout>
+
+
+
+
+

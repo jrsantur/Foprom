@@ -1,0 +1,43 @@
+<resources>
+
+  <color name="primary">#2196F3</color>
+  <color name="primary_dark">#1976D2</color>
+  <color name="primary_light">#BBDEFB</color>
+  <color name="accent">#455A64</color>
+  <color name="primary_text">#212121</color>
+  <color name="secondary_text">#727272</color>
+  <color name="icons">#FFFFFF</color>
+  <color name="divider">#B6B6B6</color>
+
+
+  <!-- Base application theme. -->
+  <!--<style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">-->
+  <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+
+    <!-- Customize your theme here. -->
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="colorAccent">@color/colorAccent</item>
+
+  </style>
+
+  <style name="AppTheme.NoActionBar">
+    <item name="windowActionBar">false</item>
+    <item name="windowNoTitle">true</item>
+  </style>
+
+  <style name="Dialog">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">wrap_content</item>
+  </style>
+
+  <style name="Dialog.Layout">
+    <item name="android:orientation">vertical</item>
+    <item name="android:padding">@dimen/margin_small</item>
+  </style>
+
+  <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+  <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>

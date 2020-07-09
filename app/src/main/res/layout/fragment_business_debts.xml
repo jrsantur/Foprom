@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:overScrollMode="always">
+
+                <Button
+                    android:id="@+id/btn_add_commerce_debts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:drawableLeft="@drawable/ic_add"
+                    android:text="Deudas Financieras"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/title_finalcial_commerce"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="16dp"
+                    android:text="Financieras"
+                    android:textStyle="bold"
+                    android:textSize="16dp"
+                    android:layout_marginLeft="8dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/btn_add_commerce_debts"
+                    />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_debts_commerce"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    tools:listitem="@layout/item_inventory"
+                    app:layout_constraintTop_toBottomOf="@+id/title_finalcial_commerce" />
+
+                <TextView
+                    android:id="@+id/label_total_debts_commerce"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total   S/"
+                    android:inputType="numberDecimal"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="2dp"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@id/rv_debts_commerce"
+                    app:layout_constraintRight_toLeftOf="@id/total_debts_commerce"
+                    />
+
+                <TextView
+                    android:id="@+id/total_debts_commerce"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0000.00"
+                    android:inputType="numberDecimal"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/label_total_debts_commerce"
+                    app:layout_constraintRight_toRightOf="parent"
+                    />
+
+
+                <LinearLayout
+                    android:id="@+id/content_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginBottom="24dp"
+                    android:gravity="center"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/total_debts_commerce"
+                    >
+
+                    <include
+                        layout="@layout/btn_layout"
+                        />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+</layout>
+

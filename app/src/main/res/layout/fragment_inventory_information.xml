@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="pe.juabsa.cipca.foprom.vo.Client" />
+        <import type="pe.juabsa.cipca.foprom.vo.Resource" />
+        <import type="androidx.lifecycle.LiveData"/>
+        <import type="java.util.List" />
+
+        <variable
+            name="client"
+            type="LiveData&lt;Resource&lt;Client>>" />
+
+        <variable
+            name="callback"
+            type="pe.juabsa.cipca.foprom.ui.common.RetryCallback" />
+
+        <variable
+            name="retryCallback"
+            type="pe.juabsa.cipca.foprom.ui.common.RetryCallback" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:overScrollMode="always">
+
+                <Button
+                    android:id="@+id/btnAddProperty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:drawableLeft="@drawable/ic_add"
+                    android:text="Agreagr bien"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/titleFurniture"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Muebles"
+                    android:textStyle="bold"
+                    android:textSize="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="8dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/btnAddProperty"
+                    />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_furniture"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    tools:listitem="@layout/item_inventory"
+                    app:layout_constraintTop_toBottomOf="@+id/titleFurniture"
+                />
+
+                <TextView
+                    android:id="@+id/labelTotalFurniture"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:inputType="numberDecimal"
+                    android:text="Total   S/"
+                    android:layout_marginRight="2dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/totalFurniture"
+                    app:layout_constraintRight_toLeftOf="@id/btnAddProperty"
+                    app:layout_constraintTop_toBottomOf="@id/rv_furniture" />
+
+                <TextView
+                    android:id="@+id/totalFurniture"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0000.00"
+                    android:inputType="numberDecimal"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/labelTotalFurniture"
+                    app:layout_constraintRight_toRightOf="parent"
+                    />
+
+
+                <TextView
+                    android:id="@+id/titleProperty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Inmueble"
+                    android:textStyle="bold"
+                    android:textSize="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="8dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/totalFurniture"
+                    />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_property"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    tools:listitem="@layout/item_inventory"
+                    app:layout_constraintTop_toBottomOf="@+id/titleProperty"
+                    />
+
+                <TextView
+                    android:id="@+id/labelTotalProperty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:inputType="numberDecimal"
+                    android:text="Total   S/"
+                    android:layout_marginRight="2dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/totalProperty"
+                    app:layout_constraintTop_toBottomOf="@id/rv_property" />
+
+                <TextView
+                    android:id="@+id/totalProperty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0000.00"
+                    android:inputType="numberDecimal"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toTopOf="@id/labelTotalProperty"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+
+                <LinearLayout
+                    android:id="@+id/content_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginBottom="24dp"
+                    android:gravity="center"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/totalProperty"
+                    >
+
+                    <include
+                        layout="@layout/btn_layout"
+                        />
+
+                </LinearLayout>
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+</layout>
+

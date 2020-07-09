@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/commerce_detail"
+    app:startDestination="@id/generalBusinessDataFragment">
+
+    <fragment
+        android:id="@+id/generalBusinessDataFragment"
+        android:name="pe.juabsa.cipca.foprom.ui.home.commerce.detail.GeneralBusinessDataFragment"
+        android:label="fragment_general_business_data"
+        tools:layout="@layout/fragment_general_business_data" >
+        <action
+            android:id="@+id/action_generalBusinessDataFragment_to_businessInventoryFragment"
+            app:destination="@id/businessInventoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/businessInventoryFragment"
+        android:name="pe.juabsa.cipca.foprom.ui.home.commerce.detail.BusinessInventoryFragment"
+        android:label="fragment_business_inventory"
+        tools:layout="@layout/fragment_business_inventory" >
+        <action
+            android:id="@+id/action_businessInventoryFragment_to_businessSalesFragment"
+            app:destination="@id/businessSalesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/businessShoppingFragment"
+        android:name="pe.juabsa.cipca.foprom.ui.home.commerce.detail.BusinessShoppingFragment"
+        android:label="fragment_business_shopping"
+        tools:layout="@layout/fragment_business_shopping" >
+        <action
+            android:id="@+id/action_businessShoppingFragment_to_balanceSheetFragment"
+            app:destination="@id/balanceSheetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/businessSalesFragment"
+        android:name="pe.juabsa.cipca.foprom.ui.home.commerce.detail.BusinessSalesFragment"
+        android:label="fragment_business_sales"
+        tools:layout="@layout/fragment_business_sales" >
+        <action
+            android:id="@+id/action_businessSalesFragment_to_businessShoppingFragment"
+            app:destination="@id/businessShoppingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/balanceSheetFragment"
+        android:name="pe.juabsa.cipca.foprom.ui.home.commerce.detail.BalanceSheetFragment"
+        android:label="fragment_balance_sheet"
+        tools:layout="@layout/fragment_balance_sheet" >
+        <action
+            android:id="@+id/action_balanceSheetFragment_to_businessDebtsFragment"
+            app:destination="@id/businessDebtsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/businessDebtsFragment"
+        android:name="pe.juabsa.cipca.foprom.ui.home.commerce.detail.BusinessDebtsFragment"
+        android:label="fragment_business_debts"
+        tools:layout="@layout/fragment_business_debts" />
+
+</navigation>
